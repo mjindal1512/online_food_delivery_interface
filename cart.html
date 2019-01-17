@@ -1,0 +1,212 @@
+<doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+.rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #080807;
+     
+       
+}
+.top td {
+
+  background-color:#474343;
+}
+
+.top a {
+  color: white;
+  
+  text-decoration: none;
+ 
+}
+
+.top  td:hover {
+  background-color: #F9F4F3;
+  color: black;
+}
+
+.top a.active {
+  background-color: #F89683;
+  
+}
+.top input[type=text]{
+    font-size: 24px;
+    color: #282c3f;
+    font-weight: 500;
+    padding: 20px 40px 20px 0;
+    margin: 0;
+    width: 100%;
+    outline: none;
+    height: 48px;
+    line-height: 1.3em;
+    caret-color: #fc8019;
+}
+
+screen and (max-width: 600px) {
+  .top a  .top input[type=text] {
+  
+    display:inline;
+    text-align:right;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
+}
+
+
+#a td{
+font-family:verdana;
+color:white;
+}
+#rcorners2 {
+    border-radius: 15px 50px 30px;
+    background: #73AD21;
+  
+}
+
+</style>
+</head>
+<body>
+
+ <script >
+ var a,tax,total;
+ var val,sum=0;
+ function bill1(){
+
+}
+function bill() {
+    var h = document.createElement("P");
+    var t = document.createTextNode(val);
+    h.appendChild(t);
+	var element = document.getElementById("div");
+element.appendChild(h);
+sum=val+sum;
+document.getElementById("demo").innerHTML=sum;
+tax=sum*0.05;
+document.getElementById("d1").innerHTML=tax;
+total=tax+sum;
+document.getElementById("d2").innerHTML=total;
+
+}
+function enter(){
+a=document.getElementById("demo1").value;
+if(a==21 || a==22 ||a==23 || a==24 ||a==01)
+val=89;
+else if(a==11 || a==12 || a==13 ||a==14 ||a==34)
+val=49;
+else if(a==02 )
+val=149;
+else if(a==03 )
+val=99;
+else {
+window.alert("INVALID CODE");
+val=0;
+}
+}
+var cod=0,i=1;
+function code(){
+
+cod=10009+i;
+document.getElementById("d4").innerHTML=cod;
+i++;
+}
+</script>
+<br>
+  <br>
+<table class="top" border=0 cellpadding=10  style="width:100%; text-align:center; ">
+<td  class="rcorners2" style="width:30%"><a href="file:///C:/Users/PC/Desktop/New%20folder/cst3.html"><img src="fe.png" alt="freeaters"  style="float:left; width:80px;height:80px; "></a></td>
+
+
+<td class="rcorners2" style="width:25%" ><input type="text" placeholder="Search.."></td>
+<td class="rcorners2" style="width:15%;" ><a href="file:///C:/Users/PC/Desktop/New%20folder/form11.html" style="font-size:100%;">SIGNIN</A></td>
+<td class="rcorners2" style="width:15%"><a href="file:///C:/Users/PC/Desktop/New%20folder/cart.html" >CART</A></td>
+<td class="rcorners2" style="width:15%"><a href="file:///C:/Users/PC/Desktop/New%20folder/help.html"  target="blank">HELP</a></td>
+
+
+</table>
+<br>
+<hr>
+<table border=0 cellpadding=10  style="width:100%; text-align:center; "><tr>
+<td style="width:20%"></td>
+<td style="width:60%"><h2>CODE:</h2>
+<input type="text" onblur="enter()" id="demo1" name="code" style="font-size:16pt;"><br><br><br></td>
+<td style="width:20%"></td>
+</tr>
+<tr>
+<td style="width:20%"></td>
+<td style="width:60%"><img class="rcorners2" onclick="bill()" src="book.png" style="width:100px;height:30px;"></td>
+<td style="width:20%"></td>
+<br><br>
+
+</tr>
+<tr>
+<td style="width:20%"><img   src="pay2.png" style="width:300px;height:200px;"></td>
+<td style="width:60%"><h1></h1>
+<BR><span id="div"></span>
+<BR><BR>
+<span>TOTAL:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<SPAN id="demo"></SPAN></span><BR><BR>
+<SPAN>TAX :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id="d1"></span></SPAN><br><br>
+<span>TOTAL WITH CHARGES : &nbsp&nbsp&nbsp&nbsp          <span id="d2"></span></SPAN>
+</td>
+<td style="width:20%"><a href=""><img   src="pay3.png"  style="width:400px;height:200px;"></a>
+
+
+</td>
+
+
+
+
+
+</tr>
+<tr>
+<td style="width:20%"></td>
+<td style="width:60%"><img class="rcorners2" onclick="code()" src="pay1.png" style="width:400px;height:80px;"><br><br>
+<span>YOUR BILL CODE:<SPAN id="d4"></span></span>
+</td>
+<td style="width:20%"></td>
+
+</tr>
+</table>
+<table id="a" border=0 cellpadding=12  style="width:100%; text-align:left; background-color:black;" >
+<tr>
+<td  rowspan="4" style="width:25%"><a   href="">
+<h3>COMPANY</h3></a>
+<br>
+<p>ABOUT US</P>
+<P>TEAM</P>
+</td>
+<td rowspan="4"  style="width:25%"><a  href=""><h3>CONTACT US</h3></a><br>
+<P>HELP & SUPPORT</P>
+<P>PARTNER WITH US</P>
+</td>
+<td rowspan="4"  style="width:25%"><a  href=""><h3>LEGAL</h3></a>
+<br>
+<P>TERMS AND CONDITION </P>
+<P>REFUND&CANCELLATION</P>
+</td>
+<td   colspan="2" style="width:25%"><img id="rcorners2" src="app2.png" style="width:300px;height:75px;"></td>
+</tr>
+<tr>
+<td colspan="2"><img src="ios.png" id="rcorners2" style="width:300px;height:75px;"></td>
+</tr>
+</table>
+
+<table id="a" cellpadding=12 style="width:100%; text-align:left; background-color:black;">
+<tr>
+<td rowspan="3" style="width:33%">xyz</td>
+<td rowspan="3" style="width:33%">@2018</td>
+
+<td colspan="3" style="width:34%">facebook</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+</body>
+</html>
